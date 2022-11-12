@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+   "target": "ESNext",
+   "module": "ESNext" ,
+   "lib": ["ESNext"],
+   "outDir": "./dist",
+   "allowSyntheticDefaultImports": true,
+   "moduleResolution": "Node",
+   "esModuleInterop": true,
+   "forceConsistentCasingInFileNames": true,
+   "skipLibCheck": true,
+   "baseUrl": "src",
+  },
+  "exclude": ["node_modules", "public", "**/*.spec.ts"]
+}
