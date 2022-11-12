@@ -7,7 +7,8 @@ const options = {
   secretOrKey
 }
 
-export default new Strategy(options, async(jwt_payload, done) => {
-  const user = await User.findById(jwt_payload.id)
-  return done(null, user)
+export default new Strategy(options, async (jwtPayload, done) => {
+  const user = await User.findById(jwtPayload.id)
+  if (user != null) return done(null, user)
+  else return done(null, false)
 })

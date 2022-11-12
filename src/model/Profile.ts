@@ -1,29 +1,31 @@
 import { Schema, model } from 'mongoose'
 
-const UserSchema = new Schema({
-  name: {
+const ProfileSchema = new Schema({
+  type: {
+    type: String
+  },
+  describe: {
+    type: String
+  },
+  income: { // 收入
     type: String,
     required: true
   },
-  email: {
+  expend: { // 支出
     type: String,
     required: true
   },
-  password: {
+  cash: { // 现金
     type: String,
     required: true
   },
-  avatar: {
+  remark: { // 备注
     type: String
   },
   date: {
     type: Date,
     default: Date.now
-  },
-  identity: {
-    type: String,
-    required: true
   }
 })
 
-export default model('users', UserSchema)
+export default model('profile', ProfileSchema)
