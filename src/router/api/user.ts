@@ -36,8 +36,6 @@ router.post('/login', async (req, res) => {
 })
 
 router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
-  console.log(req.user);
-
   const { id, name, email, identity } = req.user
   res.json({ id, name, email, identity })
 })
